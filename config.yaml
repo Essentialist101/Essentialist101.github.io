@@ -1,5 +1,5 @@
-baseurl: https://zhaohuabing.com
-title: Huabing Blog
+baseurl: https://chengzhanhuang.neilify.app
+title: HCZ Blog
 theme: hugo-theme-cleanwhite
 languageCode: en-us
 disqusShortname: ''
@@ -13,7 +13,7 @@ outputs:
     - RSS
     - Algolia
 params:
-  SEOTitle: 赵化冰的博客 | Zhaohuabing Blog
+  SEOTitle: 黄成展的博客 | HCZ Blog
   about_me: yes
   addtional_menus:
     - href: /top/books/
