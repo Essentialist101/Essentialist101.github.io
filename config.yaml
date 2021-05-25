@@ -52,7 +52,7 @@ params:
   featured_condition_size: 1
   featured_tags: yes
   friend_link:
-    - href: https://www.hezhijian.com
+    - href: https://www.hezhijian.com.cn
       title: HZJ的博客
   friends: yes
   header_image: img/home-bg-jeep.jpg
