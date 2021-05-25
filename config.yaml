@@ -52,8 +52,8 @@ params:
   featured_condition_size: 1
   featured_tags: yes
   friend_link:
-    - href: https://zhaozhihan.com
-      title: Linda的博客
+    - href: https://www.hezhijian.com
+      title: HZJ的博客
   friends: yes
   header_image: img/home-bg-jeep.jpg
   image_404: img/404-bg.jpg
