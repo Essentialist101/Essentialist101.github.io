@@ -57,23 +57,21 @@ params:
   friends: yes
   header_image: img/home-bg-jeep.jpg
   image_404: img/404-bg.jpg
-  keyword: 赵化冰, zhaohuabing, Zhaohuabing, , 赵化冰的网络日志, 赵化冰的博客, Zhaohuabing Blog, 博客,
-    个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice
+  keyword: HCZ's Blog
   leancloud_app_id: ''
   leancloud_app_key: ''
   omit_categories: no
   page_view_conter: no
   reward: yes
-  sidebar_about_description: Software Developer, Open Source Enthusiast and Life Adventurer
-  sidebar_avatar: img/zhaohuabing.png
+  sidebar_about_description: Rstudio Learner
+  sidebar_avatar: img/head.png
   slogan: 路在脚下，心向远方
   social:
-    email: youremail@gmail.com
-    github: https://github.com/yourgithub
-    linkedin: https://www.linkedin.com/in/yourlinkedinid
+    email: chengzhanhuang@gmail.com
+    github: https://github.com/Essentialist101
+    linkedin: https://www.linkedin.com/
     rss: yes
-    stackoverflow: https://stackoverflow.com/users/yourstackoverflowid
-    wechat: your wechat qr code image
+    stackoverflow: https://stackoverflow.com/
   title_404: 你来到了没有知识的荒原 :(
 outputFormats:
   Algolia:
