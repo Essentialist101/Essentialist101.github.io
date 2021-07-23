@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HCZ Blog</title>
+    <link>https://chengzhanhuang.neilify.app/</link>
+    <description>Recent content on HCZ Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://chengzhanhuang.neilify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ggplot2 Learning</title>
+      <link>https://chengzhanhuang.neilify.app/post/2021-07-23-r-ggplot2_learning/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://chengzhanhuang.neilify.app/post/2021-07-23-r-ggplot2_learning/</guid>
+      <description>一个简单的例子 library(ggplot2) ggplot(mpg, aes(displ, hwy))+ geom_point(aes(color = class))+ geom_smooth(se = FALSE)+ labs(title = paste(&amp;quot;Fuel efficiency generally decreases with engine size&amp;quot;)) library(ggplot2) library(dplyr) library(gapminder) data &amp;lt;- gapminder %&amp;gt;% filter(year==&amp;quot;2007&amp;quot;) %&amp;gt;% dplyr::select(-year) data %&amp;gt;% arrange(desc(pop)) %&amp;gt;% mutate(country = factor(country)) %&amp;gt;% ggplot(aes(x=gdpPercap, y=lifeExp, size = pop)) + geom_point(alpha=0.5) + scale_size(range = c(.1, 24), name=&amp;quot;Population (M)&amp;quot;) data %&amp;gt;% arrange(desc(pop)) %&amp;gt;% mutate(country = factor(country, country)) %&amp;gt;% ggplot(aes(x=gdpPercap, y=lifeExp, size=pop,</description>
+    </item>
+    
+    <item>
+      <title>Shiny Notes</title>
+      <link>https://chengzhanhuang.neilify.app/post/2021-07-23-r-shinynotes/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://chengzhanhuang.neilify.app/post/2021-07-23-r-shinynotes/</guid>
+      <description>Chapter 1：一个简单的例子 library(shiny) ui &amp;lt;- fluidPage( selectInput(&amp;quot;dataset&amp;quot;, label = &amp;quot;Dataset&amp;quot;, choices = ls(&amp;quot;package:datasets&amp;quot;)), verbatimTextOutput(&amp;quot;summary&amp;quot;), tableOutput(&amp;quot;table&amp;quot;) ) server &amp;lt;- function(input, output, session) { output$summary &amp;lt;- renderPrint({ dataset &amp;lt;- get(input$dataset, &amp;quot;package:datasets&amp;quot;) summary(dataset) }) output$table &amp;lt;- renderTable({ dataset &amp;lt;- get(input$dataset, &amp;quot;package:datasets&amp;quot;) dataset }) } shinyApp(ui, server) Shiny app有两部分：用户交互脚本ui、服</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://chengzhanhuang.neilify.app/top/about/</link>
+      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://chengzhanhuang.neilify.app/top/about/</guid>
+      <description>This is a blog for the R learning.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://chengzhanhuang.neilify.app/top/books/</link>
+      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://chengzhanhuang.neilify.app/top/books/</guid>
+      <description>Commonly used R packages:
+ggplot2(link: https://ggplot2-book.org/index.html)
+shiny(link: https://shiny.rstudio.com/tutorial/)
+blogdown(link: https://bookdown.org/yihui/blogdown/)</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>https://chengzhanhuang.neilify.app/post/2020-12-01-r-rmarkdown/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      
+      <guid>https://chengzhanhuang.neilify.app/post/2020-12-01-r-rmarkdown/</guid>
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://chengzhanhuang.neilify.app/search/placeholder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chengzhanhuang.neilify.app/search/placeholder/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on HCZ Blog</title>
+    <link>https://chengzhanhuang.neilify.app/tags/</link>
+    <description>Recent content in Tags on HCZ Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://chengzhanhuang.neilify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ggplot</title>
+      <link>https://chengzhanhuang.neilify.app/tags/ggplot/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://chengzhanhuang.neilify.app/tags/ggplot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shiny</title>
+      <link>https://chengzhanhuang.neilify.app/tags/shiny/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://chengzhanhuang.neilify.app/tags/shiny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plot</title>
+      <link>https://chengzhanhuang.neilify.app/tags/plot/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      
+      <guid>https://chengzhanhuang.neilify.app/tags/plot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Markdown</title>
+      <link>https://chengzhanhuang.neilify.app/tags/r-markdown/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      
+      <guid>https://chengzhanhuang.neilify.app/tags/r-markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regression</title>
+      <link>https://chengzhanhuang.neilify.app/tags/regression/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      
+      <guid>https://chengzhanhuang.neilify.app/tags/regression/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
