@@ -1,10 +1,12 @@
 ---
-title: "Shiny Notes"
-date: 2021-07-19T14:34:50+08:00
-author: "HCZ"
-draft: true
-tags: [Shiny]
-categories: [R]
+title:       "Shiny Notes"
+subtitle:    ""
+description: ""
+date:        2021-07-23
+author:      "HCZ"
+image:       ""
+tags:        ["shiny"]
+categories:  ["R" ]
 ---
 
 ## Chapter 1：一个简单的例子

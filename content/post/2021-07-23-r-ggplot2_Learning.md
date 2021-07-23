@@ -1,9 +1,12 @@
 ---
-title: "ggplot2 Learning"
-date: 2021-07-19T15:39:39+08:00
-author: "HCZ"
-draft: true
-categories: [R]
+title:       "ggplot2 Learning"
+subtitle:    ""
+description: ""
+date:        2021-07-23
+author:      "HCZ"
+image:       ""
+tags:        ["ggplot"]
+categories:  ["R" ]
 ---
 
 ### 一个简单的例子
