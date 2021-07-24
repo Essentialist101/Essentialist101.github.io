@@ -7,9 +7,10 @@ author:      "HCZ"
 image:       ""
 tags:        ["ggplot"]
 categories:  ["R" ]
+draft: "true"
 ---
 
-### 一个简单的例子
+## 一个简单的例子
 
 ```{r}
 library(ggplot2)

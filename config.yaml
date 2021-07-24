@@ -46,7 +46,7 @@ params:
     - href: https://unsplash.com
       title: unsplash
   bookmarks: no
-  description:  这里是 黄成展 的博客，与你一起发现更大的世界。
+  description:  Here is HCZ's Blog.
   disqus_proxy: ''
   disqus_site: ''
   featured_condition_size: 1
@@ -55,7 +55,7 @@ params:
     - href: https://www.hezhijian.com.cn
       title: HZJ的博客
   friends: yes
-  header_image: img/home-bg-jeep.jpg
+  header_image: img/background2.jpg
   image_404: img/404-bg.jpg
   keyword: HCZ's Blog
   leancloud_app_id: ''
@@ -65,7 +65,7 @@ params:
   reward: yes
   sidebar_about_description: Rstudio Learner
   sidebar_avatar: img/head.png
-  slogan: 路在脚下，心向远方
+  slogan: 君子敬而无失，与人恭而有礼，四海之内，皆兄弟也。
   social:
     email: chengzhanhuang@gmail.com
     github: https://github.com/Essentialist101

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shiny on HCZ Blog</title>
-    <link>https://chengzhanhuang.neilify.app/tags/shiny/</link>
+    <link>https://hcz.netlify.app--buildDrafts/tags/shiny/</link>
     <description>Recent content in shiny on HCZ Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://chengzhanhuang.neilify.app/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hcz.netlify.app--buildDrafts/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shiny Notes</title>
-      <link>https://chengzhanhuang.neilify.app/post/2021-07-23-r-shinynotes/</link>
+      <link>https://hcz.netlify.app--buildDrafts/post/2021-07-23-r-shinynotes/</link>
       <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://chengzhanhuang.neilify.app/post/2021-07-23-r-shinynotes/</guid>
+      <guid>https://hcz.netlify.app--buildDrafts/post/2021-07-23-r-shinynotes/</guid>
       <description>Chapter 1：一个简单的例子 library(shiny) ui &amp;lt;- fluidPage( selectInput(&amp;quot;dataset&amp;quot;, label = &amp;quot;Dataset&amp;quot;, choices = ls(&amp;quot;package:datasets&amp;quot;)), verbatimTextOutput(&amp;quot;summary&amp;quot;), tableOutput(&amp;quot;table&amp;quot;) ) server &amp;lt;- function(input, output, session) { output$summary &amp;lt;- renderPrint({ dataset &amp;lt;- get(input$dataset, &amp;quot;package:datasets&amp;quot;) summary(dataset) }) output$table &amp;lt;- renderTable({ dataset &amp;lt;- get(input$dataset, &amp;quot;package:datasets&amp;quot;) dataset }) } shinyApp(ui, server) Shiny app有两部分：用户交互脚本ui、服</description>
     </item>
     

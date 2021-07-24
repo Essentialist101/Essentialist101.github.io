@@ -2,56 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://chengzhanhuang.neilify.app/categories/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/categories/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/tags/ggplot/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/post/2021-07-23-r-ggplot2_learning/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/post/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/categories/r/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/post/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/tags/shiny/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/categories/r/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/post/2021-07-23-r-shinynotes/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/tags/shiny/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/tags/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/post/2021-07-23-r-shinynotes/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://chengzhanhuang.neilify.app/tags/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://chengzhanhuang.neilify.app/top/about/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/top/about/</loc>
     <lastmod>2021-05-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/top/books/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/top/books/</loc>
     <lastmod>2021-05-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/top/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/top/</loc>
     <lastmod>2021-05-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/post/2020-12-01-r-rmarkdown/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/post/2020-12-01-r-rmarkdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/tags/plot/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/tags/plot/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/tags/r-markdown/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/tags/r-markdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/tags/regression/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/tags/regression/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/search/placeholder/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/search/placeholder/</loc>
   </url><url>
-    <loc>https://chengzhanhuang.neilify.app/search/</loc>
+    <loc>https://hcz.netlify.app--buildDrafts/search/</loc>
   </url>
 </urlset>
