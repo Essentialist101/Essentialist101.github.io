@@ -1,4 +1,5 @@
 ---
+layout:     post 
 title:       "ggplot2 Learning"
 subtitle:    ""
 description: ""
@@ -7,7 +8,8 @@ author:      "HCZ"
 image:       ""
 tags:        ["ggplot"]
 categories:  ["R" ]
-draft: "true"
+published: "true"
+URL: "/2021/07/23/r-ggplot2_Learning/"
 ---
 
 ## 一个简单的例子

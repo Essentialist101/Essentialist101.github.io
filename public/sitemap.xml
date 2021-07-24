@@ -2,50 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hcz.netlify.app--buildDrafts/categories/</loc>
+    <loc>https://hcz.neilify.app/tags/git/</loc>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hcz.neilify.app/tags/github/</loc>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hcz.neilify.app/2021/07/24/GitLearning/</loc>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hcz.neilify.app/</loc>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hcz.neilify.app/post/</loc>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hcz.neilify.app/tags/</loc>
+    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hcz.neilify.app/categories/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/</loc>
+    <loc>https://hcz.neilify.app/tags/ggplot/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/post/</loc>
+    <loc>https://hcz.neilify.app/2021/07/23/r-ggplot2_Learning/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/categories/r/</loc>
+    <loc>https://hcz.neilify.app/categories/r/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/tags/shiny/</loc>
+    <loc>https://hcz.neilify.app/tags/shiny/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/post/2021-07-23-r-shinynotes/</loc>
+    <loc>https://hcz.neilify.app/2021/07/23/r-ShinyNotes/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/tags/</loc>
-    <lastmod>2021-07-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/top/about/</loc>
+    <loc>https://hcz.neilify.app/top/about/</loc>
     <lastmod>2021-05-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/top/books/</loc>
+    <loc>https://hcz.neilify.app/top/books/</loc>
     <lastmod>2021-05-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/top/</loc>
+    <loc>https://hcz.neilify.app/top/</loc>
     <lastmod>2021-05-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/post/2020-12-01-r-rmarkdown/</loc>
+    <loc>https://hcz.neilify.app/post/2020-12-01-r-rmarkdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/tags/plot/</loc>
+    <loc>https://hcz.neilify.app/tags/plot/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/tags/r-markdown/</loc>
+    <loc>https://hcz.neilify.app/tags/r-markdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/tags/regression/</loc>
+    <loc>https://hcz.neilify.app/tags/regression/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/search/placeholder/</loc>
+    <loc>https://hcz.neilify.app/search/placeholder/</loc>
   </url><url>
-    <loc>https://hcz.netlify.app--buildDrafts/search/</loc>
+    <loc>https://hcz.neilify.app/search/</loc>
   </url>
 </urlset>
