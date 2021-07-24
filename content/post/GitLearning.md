@@ -9,7 +9,6 @@ image:       ""
 tags:        ["git", "github"]
 categories:  ["" ]
 published: "true"
-URL: "/2021/07/24/GitLearning/"
 ---
 
 ## Git工作流程

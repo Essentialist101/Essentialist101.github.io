@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="ggplot2 Learning" />
+    <meta property="og:title" content="ggplot2 Learning" />
+    <meta property="twitter:title" content="ggplot2 Learning" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="HCZ&#39;s Blog">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Tops-黄成展的博客 | HCZ Blog</title>
+    <title>ggplot2 Learning-黄成展的博客 | HCZ Blog</title>
 
-    <link rel="canonical" href="/top/">
+    <link rel="canonical" href="/post/ggplot2_learning/">
 
     <link rel="stylesheet" href="/css/iDisqus.min.css"/>
 
@@ -150,14 +150,37 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/background2.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/background2.jpg')
+    }
+</style>
+<header class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>HCZ Blog </h1>
-                    
-		    <span class="subheading">君子敬而无失，与人恭而有礼，四海之内，皆兄弟也。</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/ggplot" title="ggplot">
+                            ggplot
+                        </a>
+                        
+                    </div>
+                    <h1>ggplot2 Learning</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                                 &#34;HCZ&#34;
+                         
+                        on 
+                        Friday, July 23, 2021
+                        
+                        
+                        
+                    </span>
                 </div>
             </div>
         </div>
@@ -170,13 +193,111 @@
 <article>
     <div class="container">
         <div class="row">
+
             
             <div class="
-                col-lg-8 col-lg-offset-2
+                col-lg-11 col-lg-offset-1
                 col-md-10 col-md-offset-1
                 post-container">
 
-         	
+                
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#一个简单的例子">一个简单的例子</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                
+                <h2 id="一个简单的例子">一个简单的例子</h2>
+<pre><code class="language-{r}" data-lang="{r}">library(ggplot2)
+ggplot(mpg, aes(displ, hwy))+
+  geom_point(aes(color = class))+
+  geom_smooth(se = FALSE)+
+  labs(title = paste(&quot;Fuel efficiency generally decreases with engine size&quot;))
+</code></pre><pre><code class="language-{r}" data-lang="{r}">library(ggplot2)
+library(dplyr)
+library(gapminder)
+data &lt;- gapminder %&gt;% filter(year==&quot;2007&quot;) %&gt;% dplyr::select(-year)
+
+data %&gt;%
+  arrange(desc(pop)) %&gt;%
+  mutate(country = factor(country)) %&gt;%
+  ggplot(aes(x=gdpPercap, y=lifeExp, size = pop)) +
+    geom_point(alpha=0.5) +
+    scale_size(range = c(.1, 24), name=&quot;Population (M)&quot;)
+
+data %&gt;%
+  arrange(desc(pop)) %&gt;%
+  mutate(country = factor(country, country)) %&gt;%
+  ggplot(aes(x=gdpPercap, y=lifeExp, size=pop, color=continent)) +
+    geom_point(alpha=0.5) +
+    scale_size(range = c(.1, 24), name=&quot;Population (M)&quot;)
+</code></pre>
+
+                
+                
+<div class="entry-shang text-center">
+    
+	    <p>「真诚赞赏，手留余香」</p>
+	
+	<button class="zs show-zs btn btn-bred">赞赏支持</button>
+</div>
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><a href="https://hcz.neilify.app"><img src="/img/favicon.png" />HCZ Blog</a></span>
+        
+	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
+		
+ 
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2元</button>
+			<button class="btn btn-blink" data-num="5">5元</button>
+			<button class="btn btn-blink" data-num="10">10元</button>
+			<button class="btn btn-blink" data-num="50">50元</button>
+			<button class="btn btn-blink" data-num="100">100元</button>
+			<button class="btn btn-blink" data-num="1">任意金额</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
+			<img src="/img/reward/wechat-2.png"  id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/img/reward/alipay-btn.png"/></span></label>
+	</div>
+</div>
+<script type="text/javascript" src="/js/reward.js"></script>
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/shinynotes/" data-toggle="tooltip" data-placement="top" title="Shiny Notes">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/gitlearning/" data-toggle="tooltip" data-placement="top" title="GitLearning">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
                 
 <div id="disqus-comment"></div>
 
@@ -185,7 +306,7 @@
             </div>
             
             <div class="
-                col-lg-8 col-lg-offset-2
+                col-lg-11 col-lg-offset-1
                 col-md-10 col-md-offset-1
                 sidebar-container">
 
@@ -236,7 +357,7 @@
                 <ul class="list-inline text-center">
                    
                    <li>
-                       <a href='/top/index.xml' rel="alternate" type="application/rss+xml" title="HCZ Blog" >
+                       <a href='' rel="alternate" type="application/rss+xml" title="HCZ Blog" >
                            <span class="fa-stack fa-lg">
                                <i class="fas fa-circle fa-stack-2x"></i>
                                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>

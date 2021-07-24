@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hcz.neilify.app/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shiny Notes</title>
-      <link>https://hcz.neilify.app/2021/07/23/r-ShinyNotes/</link>
+      <link>https://hcz.neilify.app/post/shinynotes/</link>
       <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hcz.neilify.app/2021/07/23/r-ShinyNotes/</guid>
+      <guid>https://hcz.neilify.app/post/shinynotes/</guid>
       <description>Chapter 1：一个简单的例子 library(shiny) ui &amp;lt;- fluidPage( selectInput(&amp;quot;dataset&amp;quot;, label = &amp;quot;Dataset&amp;quot;, choices = ls(&amp;quot;package:datasets&amp;quot;)), verbatimTextOutput(&amp;quot;summary&amp;quot;), tableOutput(&amp;quot;table&amp;quot;) ) server &amp;lt;- function(input, output, session) { output$summary &amp;lt;- renderPrint({ dataset &amp;lt;- get(input$dataset, &amp;quot;package:datasets&amp;quot;) summary(dataset) }) output$table &amp;lt;- renderTable({ dataset &amp;lt;- get(input$dataset, &amp;quot;package:datasets&amp;quot;) dataset }) } shinyApp(ui, server) Shiny app有两部分：用户交互脚本ui、服</description>
     </item>
     

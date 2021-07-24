@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hcz.neilify.app/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitLearning</title>
-      <link>https://hcz.neilify.app/2021/07/24/GitLearning/</link>
+      <link>https://hcz.neilify.app/post/gitlearning/</link>
       <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hcz.neilify.app/2021/07/24/GitLearning/</guid>
+      <guid>https://hcz.neilify.app/post/gitlearning/</guid>
       <description>Git工作流程 1.克隆 Git 资源作为工作目录。 2.在克隆的资源上添加或修改文件。 3.如果其他人修改了，你可以更新资源。 4.在提交前查看修改。 5.</description>
     </item>
     

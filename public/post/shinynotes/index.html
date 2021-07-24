@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="Shiny Notes" />
+    <meta property="og:title" content="Shiny Notes" />
+    <meta property="twitter:title" content="Shiny Notes" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="HCZ&#39;s Blog">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>黄成展的博客 | HCZ Blog</title>
+    <title>Shiny Notes-黄成展的博客 | HCZ Blog</title>
 
-    <link rel="canonical" href="/search/placeholder/">
+    <link rel="canonical" href="/post/shinynotes/">
 
     <link rel="stylesheet" href="/css/iDisqus.min.css"/>
 
@@ -163,16 +163,20 @@
                 <div class="post-heading">
                     <div class="tags">
                         
+                        <a class="tag" href="/tags/shiny" title="shiny">
+                            shiny
+                        </a>
+                        
                     </div>
-                    <h1></h1>
+                    <h1>Shiny Notes</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         Posted by 
                         
-                                HCZ Blog
+                                 &#34;HCZ&#34;
                          
                         on 
-                        Monday, January 1, 0001
+                        Friday, July 23, 2021
                         
                         
                         
@@ -200,9 +204,209 @@
                 <header>
                     <h2>TOC</h2>
                 </header>
-                <nav id="TableOfContents"></nav>
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#chapter-1一个简单的例子">Chapter 1：一个简单的例子</a></li>
+        <li><a href="#chapter-2-the-ui">Chapter 2: The UI</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
                 
-                
+                <h2 id="chapter-1一个简单的例子">Chapter 1：一个简单的例子</h2>
+<pre><code class="language-{r" data-lang="{r">library(shiny)
+ui &lt;- fluidPage(
+  selectInput(&quot;dataset&quot;, label = &quot;Dataset&quot;, choices = ls(&quot;package:datasets&quot;)),
+  verbatimTextOutput(&quot;summary&quot;),
+  tableOutput(&quot;table&quot;)
+)
+server &lt;- function(input, output, session) {
+  output$summary &lt;- renderPrint({
+    dataset &lt;- get(input$dataset, &quot;package:datasets&quot;)
+    summary(dataset)
+  })
+  
+  output$table &lt;- renderTable({
+    dataset &lt;- get(input$dataset, &quot;package:datasets&quot;)
+    dataset
+  })
+}
+shinyApp(ui, server)
+
+</code></pre><p>Shiny app有两部分：用户交互脚本ui、服务器脚本server。</p>
+<p><strong>Notes:</strong></p>
+<p>1、fluidPage() 是一个布局函数，用于设置页面的基本视觉结构。它将展示一个自动调整组件尺寸大小来适应浏览器。</p>
+<p>2、selectInput() 是一个输入控件，它允许用户通过提供一个值来与应用程序进行交互。在这种情况下，它是一个带有&quot;数据集&quot;标签的选择框，可让您选择 R 附带的内置数据集之一。</p>
+<p>3、verbatimTextOutput() 和 tableOutput() 是输出控件，它们告诉 Shiny 将渲染输出放在哪里（我们稍后会介绍如何）。 verbatimTextOutput() 显示代码，tableOutput() 显示表格。</p>
+<p>以上为写一个脚本的简单例子，但一般而言把ui与server分别放在不同的脚本比较好，以下给出建立步骤：</p>
+<p><strong>建立一个shiny app：</strong></p>
+<p>1、为app创建一个文件夹.</p>
+<p>2、app&rsquo;s server.R and ui.R 脚本放在文件夹之下</p>
+<p>3、启动app runApp 或者 RStudio的启动按钮</p>
+<p>4、退出app.</p>
+<h3 id="example">Example:</h3>
+<p><strong>(1) ui.R</strong></p>
+<pre><code class="language-{r" data-lang="{r">library(shiny)
+
+# Define UI for application that draws a histogram
+shinyUI(fluidPage(
+
+  # Application title
+  titlePanel(&quot;Hello Shiny!&quot;),
+
+  # Sidebar with a slider input for the number of bins
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput(&quot;bins&quot;,
+                  &quot;Number of bins:&quot;,
+                  min = 1,
+                  max = 50,
+                  value = 30)
+    ),
+
+    # Show a plot of the generated distribution
+    mainPanel(
+      plotOutput(&quot;distPlot&quot;)
+    )
+  )
+))
+
+</code></pre><p><strong>(2)server.R</strong></p>
+<pre><code class="language-{r" data-lang="{r">library(shiny)
+
+# Define server logic required to draw a histogram
+shinyServer(function(input, output) {
+
+  # Expression that generates a histogram. The expression is
+  # wrapped in a call to renderPlot to indicate that:
+  #
+  #  1) It is &quot;reactive&quot; and therefore should re-execute automatically
+  #     when inputs change
+  #  2) Its output type is a plot
+
+  output$distPlot &lt;- renderPlot({
+    x    &lt;- faithful[, 2]  # Old Faithful Geyser data
+    bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)
+
+    # draw the histogram with the specified number of bins
+    hist(x, breaks = bins, col = 'darkgray', border = 'white')
+  })
+})
+
+</code></pre><p>UI常用的一个布局：</p>
+<pre><code class="language-{r" data-lang="{r">library(shiny)
+shinyUI(fluidPage(
+  titlePanel(&quot;title&quot;),
+  sidebarLayout(
+    sidebarPanel(&quot;title&quot;),
+    mainPanel(&quot;title&quot;)
+  )
+  )
+)
+</code></pre><p>**Tips:**在带有Panel的函数中可以用Html5语言书写，用以编辑页面的布局。例如：</p>
+<pre><code class="language-{r" data-lang="{r"># ui.R
+
+shinyUI(fluidPage(
+  titlePanel(&quot;My Shiny App&quot;),
+  sidebarLayout(
+    sidebarPanel(),
+    mainPanel(
+        h6(&quot;Episode IV&quot;, align = &quot;center&quot;),
+        h6(&quot;A NEW HOPE&quot;, align = &quot;center&quot;),
+        h5(&quot;It is a period of civil war.&quot;, align = &quot;center&quot;),
+        h4(&quot;Rebel spaceships, striking&quot;, align = &quot;center&quot;),
+        h3(&quot;from a hidden base, have won&quot;, align = &quot;center&quot;),
+        h2(&quot;their first victory against the&quot;, align = &quot;center&quot;),
+        h1(&quot;evil Galactic Empire.&quot;)
+    )
+  )
+))
+</code></pre><p>以上是标题的演示，此外还有p()创建段落，strong()加粗，em()斜体，code()代码块，br()下一行等等。</p>
+<p>插入图片可以用img函数，img函数通过特殊处理才能找到图片，图片文件必须在www文件在下，www文件和 ui.R 脚本同路径：</p>
+<pre><code class="language-{r" data-lang="{r">img(src = &quot;my_image.png&quot;, height = 72, width = 72)
+</code></pre><p>
+  <img src="https://pic4.zhimg.com/80/v2-c4b63e5dd9f9e05da41216a5c7835cef_720w.png" alt="avatar">
+
+</p>
+<h3 id="应用参考">应用参考：</h3>
+<pre><code class="language-{r" data-lang="{r">shinyUI(fluidPage(
+  titlePanel(&quot;My Shiny App&quot;),
+  sidebarLayout(
+    sidebarPanel(
+      h2(&quot;Installation&quot;),
+      p(&quot;Shiny is available on CRAN, so you can install it in the usual way from your R console:&quot;),
+      code('install.packages(&quot;shiny&quot;)'),
+      br(),
+      br(),
+      br(),
+      br(),
+      img(src = &quot;bigorb.png&quot;, height = 72, width = 72),
+      &quot;shiny is a product of &quot;, 
+        span(&quot;RStudio&quot;, style = &quot;color:blue&quot;)
+    ),
+    mainPanel(
+      h1(&quot;Introducing Shiny&quot;),
+      p(&quot;Shiny is a new package from RStudio that makes it &quot;, 
+        em(&quot;incredibly easy&quot;), 
+        &quot; to build interactive web applications with R.&quot;),
+      br(),
+      p(&quot;For an introduction and live examples, visit the &quot;,
+        a(&quot;Shiny homepage.&quot;, 
+          href = &quot;http://www.rstudio.com/shiny&quot;)),
+      br(),
+      h2(&quot;Features&quot;),
+      p(&quot;* Build useful web applications with only a few lines of code—no JavaScript required.&quot;),
+      p(&quot;* Shiny applications are automatically “live”.. in the same way that &quot;, 
+        strong(&quot;spreadsheets&quot;),
+        &quot; are live. Outputs change instantly as users modify inputs, without requiring a reload of the browser.&quot;)
+    )
+  )
+))
+</code></pre><h2 id="chapter-2-the-ui">Chapter 2: The UI</h2>
+<p><strong>Input function:</strong></p>
+<ol>
+<li>sliderInput()</li>
+</ol>
+<pre><code class="language-{r" data-lang="{r">#条状数字输入
+sliderInput(&quot;min&quot;, &quot;Limit (minimum)&quot;, value = 50, min = 0, max = 100)
+</code></pre><p>2.selectInput()</p>
+<pre><code class="language-{r" data-lang="{r">animals &lt;- c(&quot;dog&quot;, &quot;cat&quot;, &quot;mouse&quot;, &quot;bird&quot;, &quot;other&quot;, &quot;I hate animals&quot;)
+
+ui &lt;- fluidPage(
+  selectInput(&quot;state&quot;, &quot;What's your favourite state?&quot;, state.name,multiple = TRUE),#可以多选
+  radioButtons(&quot;animal&quot;, &quot;What's your favourite animal?&quot;, animals)
+)
+</code></pre><p>
+  <img src="https://d33wubrfki0l68.cloudfront.net/2605fed791b02e16d28d2c389df9130d349bf1b3/4dc8e/demos/basic-ui/limited-choices.png" alt="avatar">
+
+
+3.textInput()</p>
+<pre><code class="language-{r" data-lang="{r">#写在fluidpage的括号内，第一个为变量名，第二个为标题
+  textInput(&quot;name&quot;, &quot;What's your name?&quot;),#文本输入
+  passwordInput(&quot;password&quot;, &quot;What's your password?&quot;),#密码类文本输入
+  textAreaInput(&quot;story&quot;, &quot;Tell me about yourself&quot;, rows = 3)#自由输入
+</code></pre><p>4.numericInput()</p>
+<pre><code class="language-{r" data-lang="{r">#数字输入或区间输入
+  numericInput(&quot;num&quot;, &quot;Number one&quot;, value = 0, min = 0, max = 100),
+  sliderInput(&quot;num2&quot;, &quot;Number two&quot;, value = 50, min = 0, max = 100),
+  sliderInput(&quot;rng&quot;, &quot;Range&quot;, value = c(10, 20), min = 0, max = 100)
+</code></pre><p>5.dateInput()</p>
+<pre><code class="language-{r" data-lang="{r">#日期输入
+  dateInput(&quot;dob&quot;, &quot;When were you born?&quot;),
+  dateRangeInput(&quot;holiday&quot;, &quot;When do you want to go on vacation next?&quot;)
+</code></pre><p>6.checkboxGroupInput/checkboxInput</p>
+<pre><code class="language-{r" data-lang="{r">#多选
+checkboxGroupInput(&quot;animal&quot;, &quot;What animals do you like?&quot;, animals)
+#单选
+checkboxInput(&quot;cleanup&quot;, &quot;Clean up?&quot;, value = TRUE),#表示已选上
+checkboxInput(&quot;shutdown&quot;, &quot;Shutdown?&quot;)
+</code></pre><p>7.fileInput</p>
+<pre><code class="language-{r" data-lang="{r">#这是UI端的代码，该函数需要server端的特殊处理
+fileInput(&quot;upload&quot;, NULL)
+</code></pre><p>8.actionButton</p>
+
 
                 
                 
@@ -249,6 +453,11 @@
                 <hr>
                 <ul class="pager">
                     
+                    
+                    <li class="next">
+                        <a href="/post/ggplot2_learning/" data-toggle="tooltip" data-placement="top" title="ggplot2 Learning">Next
+                            Post &rarr;</a>
+                    </li>
                     
                 </ul>
 

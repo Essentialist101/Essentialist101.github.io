@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="GitLearning" />
+    <meta property="og:title" content="GitLearning" />
+    <meta property="twitter:title" content="GitLearning" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="HCZ&#39;s Blog">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Tops-黄成展的博客 | HCZ Blog</title>
+    <title>GitLearning-黄成展的博客 | HCZ Blog</title>
 
-    <link rel="canonical" href="/top/">
+    <link rel="canonical" href="/post/gitlearning/">
 
     <link rel="stylesheet" href="/css/iDisqus.min.css"/>
 
@@ -150,14 +150,41 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/background2.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/background2.jpg')
+    }
+</style>
+<header class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>HCZ Blog </h1>
-                    
-		    <span class="subheading">君子敬而无失，与人恭而有礼，四海之内，皆兄弟也。</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/git" title="git">
+                            git
+                        </a>
+                        
+                        <a class="tag" href="/tags/github" title="github">
+                            github
+                        </a>
+                        
+                    </div>
+                    <h1>GitLearning</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                                 &#34;HCZ&#34;
+                         
+                        on 
+                        Saturday, July 24, 2021
+                        
+                        
+                        
+                    </span>
                 </div>
             </div>
         </div>
@@ -170,13 +197,146 @@
 <article>
     <div class="container">
         <div class="row">
+
             
             <div class="
-                col-lg-8 col-lg-offset-2
+                col-lg-11 col-lg-offset-1
                 col-md-10 col-md-offset-1
                 post-container">
 
-         	
+                
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#git工作流程">Git工作流程</a></li>
+        <li><a href="#git基本概念">Git基本概念</a></li>
+        <li><a href="#git创建仓库">Git创建仓库</a></li>
+        <li><a href="#git基本操作">Git基本操作</a></li>
+        <li><a href="#我的常用操作">我的常用操作</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                
+                <h2 id="git工作流程">Git工作流程</h2>
+<p>1.克隆 Git 资源作为工作目录。</p>
+<p>2.在克隆的资源上添加或修改文件。</p>
+<p>3.如果其他人修改了，你可以更新资源。</p>
+<p>4.在提交前查看修改。</p>
+<p>5.提交修改。</p>
+<p>6.在修改完成后，如果发现错误，可以撤回提交并再次修改并提交。</p>
+<p>
+  <img src="/img/git-process.png" alt="">
+
+</p>
+<h2 id="git基本概念">Git基本概念</h2>
+<p>1.工作区：就是你在电脑里能看到的目录。</p>
+<p>2.暂存区：英文叫stage或index。一般存放在“.git”目录下的“index”文件中，所以我们把暂存区有时也叫作索引(index)。</p>
+<p>3.版本库：工作区有一个隐藏目录“.git”，这个不算工作区，而是Git的版本库。</p>
+<p>
+  <img src="/img/concept.jpg" alt="">
+
+</p>
+<p>图中的指令：
+(1)<strong>git add</strong>:当对工作区修改（或新增）的文件执行&quot;git add&quot;命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。
+(2)<strong>git commit</strong>:当执行提交操作&quot;git commit&quot;时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。
+(3)<strong>git reset HEAD</strong>:当执行 git reset HEAD 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。
+(4)<strong>git rm &ndash;cached <!-- raw HTML omitted --></strong>:当执行 git rm &ndash;cached <!-- raw HTML omitted --> 命令时，会直接从暂存区删除文件，工作区则不做出改变。
+(5)<strong>git checkout</strong>:当执行 git checkout . 或者 git checkout &ndash; <!-- raw HTML omitted --> 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区中的改动。</p>
+<h2 id="git创建仓库">Git创建仓库</h2>
+<p>(1)<strong>git init</strong>:使用 git init 命令来初始化一个 Git 仓库，Git 的很多命令都需要在 Git 的仓库中运行，所以 git init 是使用 Git 的第一个命令。在执行完成 git init 命令后，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变。</p>
+<p>(2)<strong>git clone</strong>:使用 git clone 从现有 Git 仓库中拷贝项目。</p>
+<pre><code class="language-{}" data-lang="{}">git clone &lt;&quot;repository name&quot;&gt;
+</code></pre><p>(3)<strong>git config</strong>:git 的设置使用 git config 命令。</p>
+<h2 id="git基本操作">Git基本操作</h2>
+<p>
+  <img src="/img/git-command.jpg" alt="">
+
+
+常用指令：git clone, git push, git add, git commit, git checkout, git pull.</p>
+<p><strong>提交与修改操作</strong>
+(1)git add: 添加文件到仓库或版本库。
+(2)git status: 查看仓库当前状态，显示有变更的文件。
+(3)git diff: 比较文件的不同，即暂存区和工作区的差异。
+(4)git commit: 提交暂存区到本地仓库。
+(5)git reset: 回退版本。
+(6)git rm: 删除工作区文件。
+(7)git mv: 移动或重命名工作区文件。
+(8)git log: 查看历史提交记录。
+(9)git blame <!-- raw HTML omitted -->: 以列表形式查看制定文件的历史修改记录。</p>
+<p><strong>远程操作</strong>
+(1)git remote: 远程仓库操作。
+(2)git fetch: 从远程获取代码库。
+(3)git pull: 下载远程代码并合并。
+(4)git push: 上传远程代码并合并。</p>
+<h2 id="我的常用操作">我的常用操作</h2>
+<h3 id="git-add-">git add .</h3>
+<p>将工作区所有文件添加到版本库。</p>
+<h3 id="git-commit--m-remark">git commit -m &ldquo;remark&rdquo;</h3>
+<p>提交暂存区到本地仓库。</p>
+<h3 id="git-remote--v">git remote -v</h3>
+<p>显示所有远程仓库及其链接。</p>
+<h3 id="git-push-origin-master">git push origin master</h3>
+<p>将文件推送到远程仓库origin的master分支。</p>
+
+
+                
+                
+<div class="entry-shang text-center">
+    
+	    <p>「真诚赞赏，手留余香」</p>
+	
+	<button class="zs show-zs btn btn-bred">赞赏支持</button>
+</div>
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><a href="https://hcz.neilify.app"><img src="/img/favicon.png" />HCZ Blog</a></span>
+        
+	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
+		
+ 
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2元</button>
+			<button class="btn btn-blink" data-num="5">5元</button>
+			<button class="btn btn-blink" data-num="10">10元</button>
+			<button class="btn btn-blink" data-num="50">50元</button>
+			<button class="btn btn-blink" data-num="100">100元</button>
+			<button class="btn btn-blink" data-num="1">任意金额</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
+			<img src="/img/reward/wechat-2.png"  id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/img/reward/alipay-btn.png"/></span></label>
+	</div>
+</div>
+<script type="text/javascript" src="/js/reward.js"></script>
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/ggplot2_learning/" data-toggle="tooltip" data-placement="top" title="ggplot2 Learning">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
                 
 <div id="disqus-comment"></div>
 
@@ -185,7 +345,7 @@
             </div>
             
             <div class="
-                col-lg-8 col-lg-offset-2
+                col-lg-11 col-lg-offset-1
                 col-md-10 col-md-offset-1
                 sidebar-container">
 
@@ -236,7 +396,7 @@
                 <ul class="list-inline text-center">
                    
                    <li>
-                       <a href='/top/index.xml' rel="alternate" type="application/rss+xml" title="HCZ Blog" >
+                       <a href='' rel="alternate" type="application/rss+xml" title="HCZ Blog" >
                            <span class="fa-stack fa-lg">
                                <i class="fas fa-circle fa-stack-2x"></i>
                                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>

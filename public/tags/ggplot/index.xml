@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hcz.neilify.app/tags/ggplot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ggplot2 Learning</title>
-      <link>https://hcz.neilify.app/2021/07/23/r-ggplot2_Learning/</link>
+      <link>https://hcz.neilify.app/post/ggplot2_learning/</link>
       <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hcz.neilify.app/2021/07/23/r-ggplot2_Learning/</guid>
+      <guid>https://hcz.neilify.app/post/ggplot2_learning/</guid>
       <description>一个简单的例子 library(ggplot2) ggplot(mpg, aes(displ, hwy))+ geom_point(aes(color = class))+ geom_smooth(se = FALSE)+ labs(title = paste(&amp;quot;Fuel efficiency generally decreases with engine size&amp;quot;)) library(ggplot2) library(dplyr) library(gapminder) data &amp;lt;- gapminder %&amp;gt;% filter(year==&amp;quot;2007&amp;quot;) %&amp;gt;% dplyr::select(-year) data %&amp;gt;% arrange(desc(pop)) %&amp;gt;% mutate(country = factor(country)) %&amp;gt;% ggplot(aes(x=gdpPercap, y=lifeExp, size = pop)) + geom_point(alpha=0.5) + scale_size(range = c(.1, 24), name=&amp;quot;Population (M)&amp;quot;) data %&amp;gt;% arrange(desc(pop)) %&amp;gt;% mutate(country = factor(country, country)) %&amp;gt;% ggplot(aes(x=gdpPercap, y=lifeExp, size=pop,</description>
     </item>
     

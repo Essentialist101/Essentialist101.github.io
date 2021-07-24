@@ -9,7 +9,6 @@ image:       ""
 tags:        ["shiny"]
 categories:  ["R" ]
 published: "true"
-URL: "/2021/07/23/r-ShinyNotes/"
 ---
 
 ## Chapter 1：一个简单的例子
